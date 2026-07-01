@@ -44,6 +44,8 @@ Every piece is originally crafted. Nothing is copied from a template or generate
 |--------|----------|-------------|
 | **[Memory File Guard](auxiliary/memory-file-guard/)** | Auxiliary | Intercepts memory/user file writes, requires explicit user approval before allowing changes. Prevents silent memory corruption. [中文 →](auxiliary/memory-file-guard/README.zh.md) |
 
+> 💡 Download → place in `$HERMES_HOME/plugins/memory-file-guard/` → add to `plugins.enabled` → restart gateway. Done.
+
 ## The Closed-Loop Philosophy
 
 The ideal is a **closed-loop workflow**: the output of one stage feeds directly into the input of the next, with no manual handoffs in between.

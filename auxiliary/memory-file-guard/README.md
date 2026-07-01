@@ -6,6 +6,10 @@
 
 A Hermes Agent plugin that **intercepts memory and user file writes**, requiring explicit user approval before any changes are committed. Designed as a safety net to prevent the AI from silently overwriting your persistent memory.
 
+> **⚡ Quick Setup —** Download the [plugin files](https://github.com/llitgq-byte/HermesBoost/tree/main/auxiliary/memory-file-guard/bundled/plugins/memory-file-guard) into `$HERMES_HOME/plugins/memory-file-guard/`, add `memory-file-guard` to `plugins.enabled` in your `config.yaml`, then restart the gateway — all memory and user file writes will require your explicit approval before taking effect.
+
+---
+
 ## Why Does This Exist?
 
 Hermes Agent uses two files — `MEMORY.md` and `USER.md` — to store persistent knowledge across sessions. These files are critical: they shape how the agent behaves, what it remembers about you, and how it responds in future conversations.

@@ -6,6 +6,8 @@
 
 一个 Hermes Agent 插件，**拦截 memory 和 user 文件的写入操作**，要求用户明确批准后才能提交更改。作为安全防护网，防止 AI 在未经你同意的情况下静默覆写你的持久记忆文件。
 
+> **⚡ 一键配置 —** 下载 [插件文件](https://github.com/llitgq-byte/HermesBoost/tree/main/auxiliary/memory-file-guard/bundled/plugins/memory-file-guard) 放到 `$HERMES_HOME/plugins/memory-file-guard/`，在 `config.yaml` 的 `plugins.enabled` 中加入 `memory-file-guard`，重启 Gateway 即可——所有 memory 和 user 文件的写入都将需要你的明确批准才会生效。
+
 ## 为什么需要它？
 
 Hermes Agent 使用两个文件 —— `MEMORY.md` 和 `USER.md` —— 来存储跨会话的持久知识。这些文件至关重要：它们决定了 Agent 的行为方式、对你的记忆内容，以及它在未来对话中的响应方式。
