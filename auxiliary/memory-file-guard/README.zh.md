@@ -6,7 +6,11 @@
 
 一个 Hermes Agent 插件，**拦截 memory 和 user 文件的写入操作**，要求用户明确批准后才能提交更改。作为安全防护网，防止 AI 在未经你同意的情况下静默覆写你的持久记忆文件。
 
-> **⚡ 一键配置 —** 下载 [插件文件](https://github.com/llitgq-byte/HermesBoost/tree/main/auxiliary/memory-file-guard/bundled/plugins/memory-file-guard) 放到 `$HERMES_HOME/plugins/memory-file-guard/`，在 `config.yaml` 的 `plugins.enabled` 中加入 `memory-file-guard`，重启 Gateway 即可——所有 memory 和 user 文件的写入都将需要你的明确批准才会生效。
+> **⚡ 复制这段给你的 Agent → Agent 会自动完成全部配置：**
+>
+> ```
+> 从 https://github.com/llitgq-byte/HermesBoost/tree/main/auxiliary/memory-file-guard/bundled/plugins/memory-file-guard 下载 plugin.yaml 和 __init__.py，放到 $HERMES_HOME/plugins/memory-file-guard/ 目录下，然后在 config.yaml 的 plugins.enabled 中添加 memory-file-guard，最后重启 gateway。这是一个 Memory File Guard 插件，拦截 Hermes Agent 对 memory 和 user 文件的写入操作，要求用户明确批准后才允许更改，防止 AI 静默覆写持久记忆。
+> ```
 
 ## 为什么需要它？
 

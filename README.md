@@ -44,7 +44,7 @@ Every piece is originally crafted. Nothing is copied from a template or generate
 |--------|----------|-------------|
 | **[Memory File Guard](auxiliary/memory-file-guard/)** | Auxiliary | Intercepts memory/user file writes, requires explicit user approval before allowing changes. Prevents silent memory corruption. [中文 →](auxiliary/memory-file-guard/README.zh.md) |
 
-> 💡 Download → place in `$HERMES_HOME/plugins/memory-file-guard/` → add to `plugins.enabled` → restart gateway. Done.
+> 💡 Copy the prompt from its page → paste to your Agent → auto-configured.
 
 ## The Closed-Loop Philosophy
 
