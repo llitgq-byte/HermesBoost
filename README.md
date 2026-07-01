@@ -35,6 +35,7 @@ Every piece is originally crafted. Nothing is copied from a template or generate
 | Module | Description |
 |--------|-------------|
 | **[SysTools-memory-file-guard](SysTools-memory-file-guard/)** | Intercepts memory/user file writes, requires explicit user approval before allowing changes. Prevents silent memory corruption. [中文 →](SysTools-memory-file-guard/README.zh.md) |
+| **[SysTools-feishu-cards](SysTools-feishu-cards/)** | Auto-converts Markdown tables, headings, code blocks in Feishu replies to interactive JSON 2.0 cards. Dual-layer (Agent + Plugin). [中文 →](SysTools-feishu-cards/README.zh.md) |
 
 > 💡 Copy the prompt from its page → paste to your Agent → auto-configured.
 
@@ -61,6 +62,17 @@ hermesboost/
 │       └── bundled/plugins/memory-file-guard/
 │           ├── __init__.py                  # Plugin source
 │           └── plugin.yaml                  # Plugin declaration
+├── SysTools-feishu-cards/                  # Markdown → Feishu interactive cards
+│   ├── README.md                          # Public docs (EN)
+│   ├── README.zh.md                       # 公开文档（中文）
+│   └── feishu-cards/                      # Skill content
+│       ├── SKILL.md                        # Agent instruction
+│       ├── references/
+│       ├── templates/
+│       ├── scripts/
+│       └── bundled/plugins/feishu-table-card/
+│           ├── __init__.py                  # Plugin hook
+│           └── plugin.yaml
 ```
 
 ## Roadmap

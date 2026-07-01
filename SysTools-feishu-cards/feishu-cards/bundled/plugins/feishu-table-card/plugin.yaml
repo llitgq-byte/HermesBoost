@@ -1,0 +1,6 @@
+name: feishu-table-card
+version: "1.0.0"
+description: Auto-detect tables in agent responses and send as Feishu interactive cards instead of plain text
+author: user
+provides_hooks:
+  - transform_llm_output
