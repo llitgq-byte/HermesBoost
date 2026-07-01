@@ -39,6 +39,7 @@ Every piece is originally crafted. Nothing is copied from a template or generate
 | **[SysTools-feishu-bitable](SysTools-feishu-bitable/)** | Universal Feishu Bitable (multidimensional table) API guide with pure-Python helper script. 16 documented pitfalls, zero dependencies. [中文 →](SysTools-feishu-bitable/README.zh.md) |
 | **[SysTools-feishu-calendar](SysTools-feishu-calendar/)** | Manage shared calendar events (create/list/delete) via Feishu API. CLI tool with one-time init and persistent state. [中文 →](SysTools-feishu-calendar/README.zh.md) |
 | **[SysTools-chrome-play](SysTools-chrome-play/)** | Control local Chrome browser via CDP. Complete startup guide, SPA patterns, CodeMirror 6 editing, 13 pitfalls. [中文 →](SysTools-chrome-play/README.zh.md) |
+| **[SysTools-text-touch](SysTools-text-touch/)** | Gateway message interception/routing framework. Regex-based pre-dispatch hook that rewrites short fuzzy messages into deterministic skill commands. Zero-dependency Python Plugin. [中文 →](SysTools-text-touch/README.zh.md) |
 
 > 💡 Copy the prompt from its page → paste to your Agent → auto-configured.
 
@@ -97,6 +98,14 @@ hermesboost/
 │       ├── SKILL.md                        # Agent instruction
 │       ├── references/                     # Technical references (5 docs)
 │       └── templates/                      # GitHub profile README template
+├── SysTools-text-touch/                       # Gateway message interception/routing framework
+│   ├── README.md                          # Public docs (EN)
+│   ├── README.zh.md                       # 公开文档（中文）
+│   └── text-touch/                        # Skill content
+│       ├── SKILL.md                        # Agent instruction (700 lines)
+│       └── templates/                      # Copyable Plugin templates
+│           ├── __init__.py                  # Plugin entry with regex rules
+│           └── plugin.yaml                  # Plugin manifest
 ```
 
 ## Roadmap

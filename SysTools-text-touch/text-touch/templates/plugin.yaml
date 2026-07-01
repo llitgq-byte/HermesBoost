@@ -1,0 +1,6 @@
+name: <plugin-name>
+version: "1.0.0"
+description: 简短描述这个 plugin 做什么
+author: user
+provides_hooks:
+  - pre_gateway_dispatch
