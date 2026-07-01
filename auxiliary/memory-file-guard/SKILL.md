@@ -357,7 +357,8 @@ cp -r ~/.hermes/skills/Always/tools-memory-user-file-in ~/Documents/public_githu
 | 5️⃣ 配置方法 | config.yaml 加哪行条目、可选的 OS 级文件锁 |
 
 模板结构：
-- `README.md`（英文）+ `README.zh.md`（中文）— 双文件分离，交叉锚链
+- `README.zh.md`（中文）为 SKILL 内部引用的默认文档
+- `README.md`（英文）为面向国际用户的公开介绍，与 SKILL 内容独立维护
 - 项目定位为「探索性经验分享」，不宣称「生产就绪」
 - 明确说明哪些是通用内容、哪些来自个人配置经验
 
