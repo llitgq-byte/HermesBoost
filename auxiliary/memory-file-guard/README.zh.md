@@ -181,6 +181,7 @@ chattr -i ~/.hermes/memories/MEMORY.md
 memory-file-guard/
 ├── README.md                          # 本文件（中文）
 ├── README.zh.md                       # 本文件（中文）
+├── SKILL.md                           # Agent 指令（加载到 Hermes 获取完整工作流）
 └── bundled/
     └── plugins/
         └── memory-file-guard/

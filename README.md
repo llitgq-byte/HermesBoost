@@ -65,6 +65,7 @@ hermesboost/
 │   └── memory-file-guard/                 # Memory & User file write protection
 │       ├── README.md                      # Module docs (EN)
 │       ├── README.zh.md                   # 模块文档（中文）
+│       ├── SKILL.md                       # Agent instruction
 │       └── bundled/plugins/memory-file-guard/
 │           ├── __init__.py                 # Plugin source
 │           └── plugin.yaml                 # Plugin declaration
