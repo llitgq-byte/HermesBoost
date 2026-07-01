@@ -4,15 +4,17 @@
 
 ---
 
-A Hermes Agent plugin that **intercepts memory and user file writes**, requiring explicit user approval before any changes are committed. Designed as a safety net to prevent the AI from silently overwriting your persistent memory.
+<p align="center">
+  <strong>⚡ Copy this to your Agent → Agent will auto-configure everything:</strong>
+</p>
 
-> **⚡ Copy this to your Agent → Agent will auto-configure everything:**
->
-> ```
-> Download plugin.yaml and __init__.py from https://github.com/llitgq-byte/HermesBoost/tree/main/auxiliary/memory-file-guard/bundled/plugins/memory-file-guard, place them under $HERMES_HOME/plugins/memory-file-guard/, add memory-file-guard to plugins.enabled in config.yaml, then restart the gateway. This is the Memory File Guard plugin — it intercepts Hermes Agent memory and user file writes, requiring explicit user approval before changes take effect, preventing the AI from silently overwriting persistent memory.
-> ```
+<p align="center">
+  <code>Download plugin.yaml and __init__.py from https://github.com/llitgq-byte/HermesBoost/tree/main/auxiliary/memory-file-guard/bundled/plugins/memory-file-guard, place them under $HERMES_HOME/plugins/memory-file-guard/, add memory-file-guard to plugins.enabled in config.yaml, then restart the gateway. This is the Memory File Guard plugin — it intercepts Hermes Agent memory and user file writes, requiring explicit user approval before changes take effect, preventing the AI from silently overwriting persistent memory.</code>
+</p>
 
 ---
+
+A Hermes Agent plugin that **intercepts memory and user file writes**, requiring explicit user approval before any changes are committed. Designed as a safety net to prevent the AI from silently overwriting your persistent memory.
 
 ## Why Does This Exist?
 
