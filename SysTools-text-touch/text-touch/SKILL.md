@@ -206,17 +206,17 @@ provides_hooks:
 
 ```
 情况 A：你的 Agent 是 default（即只有一个 Agent，没有创建子 Agent）
-  Plugin 放在：~/.hermes/plugins/<plugin_name>/
-  config.yaml 位置：~/.hermes/config.yaml
+  Plugin 放在：$HERMES_HOME/plugins/<plugin_name>/
+  config.yaml 位置：$HERMES_HOME/config.yaml
 
 情况 B：你的 Agent 是子 Agent（profile）
-  Plugin 放在：~/.hermes/profiles/<profile_name>/plugins/<plugin_name>/
-  config.yaml 位置：~/.hermes/profiles/<profile_name>/config.yaml
+  Plugin 放在：$HERMES_HOME/profiles/<profile_name>/plugins/<plugin_name>/
+  config.yaml 位置：$HERMES_HOME/profiles/<profile_name>/config.yaml
 ```
 
 **为什么？** 运行时 `HERMES_HOME` 环境变量指向当前 Agent 的根目录，Plugin 扫描路径是 `HERMES_HOME/plugins/`：
-- default profile → `~/.hermes/plugins/`
-- 子 Agent profile → `~/.hermes/profiles/<name>/plugins/`
+- default profile → `$HERMES_HOME/plugins/`
+- 子 Agent profile → `$HERMES_HOME/profiles/<name>/plugins/`
 
 放错位置，config.yaml 里写了对也不会加载，日志里不会有 `registered`。
 
@@ -242,10 +242,10 @@ plugins:
 
 ```bash
 # 如果是 default profile：
-PLUGINS_DIR=~/.hermes/plugins
+PLUGINS_DIR=$HERMES_HOME/plugins
 
 # 如果是子 Agent（如 my-agent）：
-PLUGINS_DIR=~/.hermes/profiles/my-agent/plugins
+PLUGINS_DIR=$HERMES_HOME/profiles/my-agent/plugins
 ```
 
 ### 4.2 复制模板并创建 plugin
@@ -255,8 +255,8 @@ PLUGINS_DIR=~/.hermes/profiles/my-agent/plugins
 mkdir -p $PLUGINS_DIR/task-router
 
 # 从 text-touch skill 复制模板
-cp ~/.hermes/skills/Always/text-touch/templates/__init__.py $PLUGINS_DIR/task-router/
-cp ~/.hermes/skills/Always/text-touch/templates/plugin.yaml $PLUGINS_DIR/task-router/
+cp $HERMES_HOME/skills/Always/text-touch/templates/__init__.py $PLUGINS_DIR/task-router/
+cp $HERMES_HOME/skills/Always/text-touch/templates/plugin.yaml $PLUGINS_DIR/task-router/
 ```
 
 ### 4.3 修改 plugin.yaml — 填写实际名称
@@ -447,7 +447,7 @@ logger = logging.getLogger("plugins.<plugin-name>")
 logger.info("matched [%s]: '%s' → '%s'", name, original_text, rewrite_text)
 ```
 
-日志查看位置：`~/.hermes/logs/agent.log`（default）或 `~/.hermes/profiles/<name>/logs/agent.log`（子 Agent）。
+日志查看位置：`$HERMES_HOME/logs/agent.log`（default）或 `$HERMES_HOME/profiles/<name>/logs/agent.log`（子 Agent）。
 
 ---
 
@@ -455,7 +455,7 @@ logger.info("matched [%s]: '%s' → '%s'", name, original_text, rewrite_text)
 
 ### 6.1 需求背景
 
-stock-assistant（股票助手）Agent 有多个 skill：
+<your-profile>（<stock-agent>）Agent 有多个 skill：
 - `stock-view` — 个股分析、两股对比、三股对比
 - `stock-chromeJJ` — 诊股 + 巨潮测评 + F10 全景
 - `stock-trading` — 交易记录
@@ -496,7 +496,7 @@ re.compile(r"^(\d{6})$")
 ### 6.4 实际文件位置
 
 ```
-~/.hermes/profiles/stock-assistant/plugins/stock-router/
+$HERMES_HOME/profiles/<your-profile>/plugins/stock-router/
 ├── __init__.py      # 正则规则 + register()
 └── plugin.yaml      # 声明
 ```
@@ -525,9 +525,9 @@ plugins:
 
 ### 7.2 Profile 的 plugins 目录是本地的
 
-**症状：** Plugin 在 `~/.hermes/plugins/` 下创建，`config.yaml` 已启用，但 agent.log 中没有 `registered` 日志。
+**症状：** Plugin 在 `$HERMES_HOME/plugins/` 下创建，`config.yaml` 已启用，但 agent.log 中没有 `registered` 日志。
 
-**根因：** 子 Agent profile 下 `HERMES_HOME` 指向 profile 目录，Plugin 扫描的是 `~/.hermes/profiles/<name>/plugins/`，不是全局 `~/.hermes/plugins/`。
+**根因：** 子 Agent profile 下 `HERMES_HOME` 指向 profile 目录，Plugin 扫描的是 `$HERMES_HOME/profiles/<name>/plugins/`，不是全局 `$HERMES_HOME/plugins/`。
 
 **教训：** Plugin 必须放在目标 Agent 的 plugins 目录下（见第三部分 3.3 节的判断方法）。
 
@@ -567,7 +567,7 @@ Text-Touch 是一个**完全独立**的 skill，不依赖任何其他 skill 或 
 
 ```bash
 # 复制 skill 文件本身
-cp -r ~/.hermes/skills/Always/text-touch ~/.hermes/profiles/<目标profile>/skills/Always/
+cp -r $HERMES_HOME/skills/Always/text-touch $HERMES_HOME/profiles/<目标profile>/skills/Always/
 
 # 复制模板（可选，如果目标 Agent 需要创建自己的路由 plugin）
 # 模板已包含在 skill 目录的 templates/ 下，无需额外复制
@@ -579,7 +579,7 @@ cp -r ~/.hermes/skills/Always/text-touch ~/.hermes/profiles/<目标profile>/skil
 
 ```bash
 # 整个 skill 目录复制过去即可
-scp -r ~/.hermes/skills/Always/text-touch user@other:~/.hermes/skills/Always/
+scp -r $HERMES_HOME/skills/Always/text-touch user@other:$HERMES_HOME/skills/Always/
 ```
 
 ---
