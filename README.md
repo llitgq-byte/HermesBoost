@@ -34,7 +34,7 @@ Every piece is originally crafted. Nothing is copied from a template or generate
 
 | Module | Description |
 |--------|-------------|
-| **[memory-file-guard](memory-file-guard/)** | Intercepts memory/user file writes, requires explicit user approval before allowing changes. Prevents silent memory corruption. [中文 →](memory-file-guard/README.zh.md) |
+| **[SysTools-memory-file-guard](SysTools-memory-file-guard/)** | Intercepts memory/user file writes, requires explicit user approval before allowing changes. Prevents silent memory corruption. [中文 →](SysTools-memory-file-guard/README.zh.md) |
 
 > 💡 Copy the prompt from its page → paste to your Agent → auto-configured.
 
@@ -52,7 +52,7 @@ What we are really exploring is this boundary — where manual ends and automati
 hermesboost/
 ├── README.md                              # English documentation
 ├── README.zh.md                           # 中文文档
-├── memory-file-guard/                     # Memory & User file write protection
+├── SysTools-memory-file-guard/             # Memory & User file write protection
 │   ├── README.md                          # Public docs (EN)
 │   ├── README.zh.md                       # 公开文档（中文）
 │   └── memory-file-guard/                  # Skill content

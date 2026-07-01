@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <code>下载 https://github.com/llitgq-byte/HermesBoost/tree/main/memory-file-guard/memory-file-guard 下的全部文件，放入 $HERMES_HOME/skills/Always/memory-file-guard/，将 bundled/plugins/memory-file-guard/ 复制到 $HERMES_HOME/plugins/memory-file-guard/，在 config.yaml 的 plugins.enabled 中添加 memory-file-guard，然后重启 gateway。这是 memory-file-guard 插件——拦截 memory/user 文件写入，要求用户明确确认后才允许更改。</code>
+  <code>下载 https://github.com/llitgq-byte/HermesBoost/tree/main/SysTools-memory-file-guard/memory-file-guard 下的全部文件，放入 $HERMES_HOME/skills/Always/memory-file-guard/，将 bundled/plugins/memory-file-guard/ 复制到 $HERMES_HOME/plugins/memory-file-guard/，在 config.yaml 的 plugins.enabled 中添加 memory-file-guard，然后重启 gateway。这是 memory-file-guard 插件——拦截 memory/user 文件写入，要求用户明确确认后才允许更改。</code>
 </p>
 
 ---

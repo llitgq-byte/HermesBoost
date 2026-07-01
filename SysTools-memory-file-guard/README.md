@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <code>Download all files from https://github.com/llitgq-byte/HermesBoost/tree/main/memory-file-guard/memory-file-guard, place them under $HERMES_HOME/skills/Always/memory-file-guard/, copy bundled/plugins/memory-file-guard/ to $HERMES_HOME/plugins/memory-file-guard/, add memory-file-guard to plugins.enabled in config.yaml, then restart the gateway. This is the memory-file-guard plugin — intercepts memory/user file writes and requires explicit user confirmation before allowing changes.</code>
+  <code>Download all files from https://github.com/llitgq-byte/HermesBoost/tree/main/SysTools-memory-file-guard/memory-file-guard, place them under $HERMES_HOME/skills/Always/memory-file-guard/, copy bundled/plugins/memory-file-guard/ to $HERMES_HOME/plugins/memory-file-guard/, add memory-file-guard to plugins.enabled in config.yaml, then restart the gateway. This is the memory-file-guard plugin — intercepts memory/user file writes and requires explicit user confirmation before allowing changes.</code>
 </p>
 
 ---
