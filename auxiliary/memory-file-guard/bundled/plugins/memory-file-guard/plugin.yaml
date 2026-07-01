@@ -1,8 +1,0 @@
-name: memory-file-guard
-version: "1.0.0"
-description: >
-  拦截 Hermes memory 工具的写入操作（target=memory 或 target=user），要求用户确认。
-author: llitgq-byte
-hooks:
-  pre_tool_call: register
-entry_point: __init__.py
