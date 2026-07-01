@@ -30,19 +30,11 @@ Hermes is powerful, but it's not perfect. In real-world use, there are repetitiv
 
 Every piece is originally crafted. Nothing is copied from a template or generated in bulk. Each module exists because a real friction point was encountered and solved.
 
-## Categories
+## Active Modules
 
-| Category | Description |
-|----------|-------------|
-| **[Auxiliary](auxiliary/)** | Skills and hooks that add a protective layer to Hermes — making it easier to use and less prone to repeat the same mistakes. |
-| **[Finance](finance/)** | Stock research and analysis workflows — from pre-market briefing and intraday tracking to post-trade review — tailored to personal holdings and investment strategies. |
-| **[Life](life/)** | Everyday intelligence solutions. Currently pending development — to be expanded over time. |
-
-### Active Modules
-
-| Module | Category | What It Does |
-|--------|----------|-------------|
-| **[Memory File Guard](auxiliary/memory-file-guard/)** | Auxiliary | Intercepts memory/user file writes, requires explicit user approval before allowing changes. Prevents silent memory corruption. [中文 →](auxiliary/memory-file-guard/README.zh.md) |
+| Module | Description |
+|--------|-------------|
+| **[memory-file-guard](memory-file-guard/)** | Intercepts memory/user file writes, requires explicit user approval before allowing changes. Prevents silent memory corruption. [中文 →](memory-file-guard/README.zh.md) |
 
 > 💡 Copy the prompt from its page → paste to your Agent → auto-configured.
 
@@ -56,27 +48,27 @@ What we are really exploring is this boundary — where manual ends and automati
 
 ## Directory Structure
 
+```
 hermesboost/
 ├── README.md                              # English documentation
 ├── README.zh.md                           # 中文文档
-├── auxiliary/
-│   └── memory-file-guard/                 # Memory & User file write protection
-│       ├── README.md                      # Module docs (EN)
-│       ├── README.zh.md                   # 模块文档（中文）
-│       ├── SKILL.md                       # Agent instruction
+├── memory-file-guard/                     # Memory & User file write protection
+│   ├── README.md                          # Public docs (EN)
+│   ├── README.zh.md                       # 公开文档（中文）
+│   └── memory-file-guard/                  # Skill content
+│       ├── SKILL.md                        # Agent instruction
+│       ├── references/
 │       └── bundled/plugins/memory-file-guard/
-│           ├── __init__.py                 # Plugin source
-│           └── plugin.yaml                 # Plugin declaration
-├── finance/                               # Stock research workflows (planned)
-└── life/                                  # Everyday intelligence (on hold)
+│           ├── __init__.py                  # Plugin source
+│           └── plugin.yaml                  # Plugin declaration
+```
 
 ## Roadmap
 
 | Phase | Status | Focus |
 |-------|--------|-------|
-| Auxiliary Foundation | In Progress | System-level skills and hooks |
-| Finance Pipeline | Planned | Stock research workflows |
-| Life Tools | On Hold | Everyday intelligence |
+| Guardrails & Protection | ✅ Shipped | Memory file guard |
+| Platform Integration | In Progress | Feishu card rendering |
 | Further Exploration | Open | Wherever the gaps appear |
 
 The journey itself is the product. Every component is originally crafted.
