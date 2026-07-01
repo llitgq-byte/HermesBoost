@@ -1,0 +1,6 @@
+name: memory-file-guard
+version: "1.0.0"
+description: Intercept memory/user file writes and require user approval before allowing.
+author: hermes-skill
+provides_hooks:
+  - pre_tool_call

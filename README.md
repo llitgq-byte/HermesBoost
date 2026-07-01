@@ -34,9 +34,15 @@ Every piece is originally crafted. Nothing is copied from a template or generate
 
 | Category | Description |
 |----------|-------------|
-| **Auxiliary** | Skills and hooks that add a protective layer to Hermes — making it easier to use and less prone to repeat the same mistakes. Not about making it smarter; about making it more reliable in practice. |
-| **Finance** | Stock research and analysis workflows — from pre-market briefing and intraday tracking to post-trade review — tailored to personal holdings and investment strategies. |
-| **Life** | Everyday intelligence solutions. Currently pending development — to be expanded over time. |
+| **[Auxiliary](auxiliary/)** | Skills and hooks that add a protective layer to Hermes — making it easier to use and less prone to repeat the same mistakes. [中文 →](auxiliary/README.zh.md) |
+| **[Finance](finance/)** | Stock research and analysis workflows — from pre-market briefing and intraday tracking to post-trade review — tailored to personal holdings and investment strategies. [中文 →](finance/README.zh.md) |
+| **[Life](life/)** | Everyday intelligence solutions. Currently pending development — to be expanded over time. [中文 →](life/README.zh.md) |
+
+### Active Modules
+
+| Module | Category | What It Does |
+|--------|----------|-------------|
+| **[Memory File Guard](auxiliary/memory-file-guard/)** | Auxiliary | Intercepts memory/user file writes, requires explicit user approval before allowing changes. Prevents silent memory corruption. [中文 →](auxiliary/memory-file-guard/README.zh.md) |
 
 ## The Closed-Loop Philosophy
 
@@ -49,11 +55,23 @@ What we are really exploring is this boundary — where manual ends and automati
 ## Directory Structure
 
 hermesboost/
-├── README.md          # English documentation
-├── README.zh.md       # Chinese documentation
-├── auxiliary/         # System-level skills and hooks
-├── finance/           # Stock research workflows
-└── life/              # Everyday intelligence tools
+├── README.md                              # English documentation
+├── README.zh.md                           # 中文文档
+├── auxiliary/
+│   ├── README.md                          # Auxiliary overview (EN)
+│   ├── README.zh.md                       # Auxiliary 概述（中文）
+│   └── memory-file-guard/                 # Memory & User file write protection
+│       ├── README.md                      # Module docs (EN)
+│       ├── README.zh.md                   # 模块文档（中文）
+│       └── bundled/plugins/memory-file-guard/
+│           ├── __init__.py                 # Plugin source
+│           └── plugin.yaml                 # Plugin declaration
+├── finance/
+│   ├── README.md                          # Finance overview (EN)
+│   └── README.zh.md                       # 金融概述（中文）
+└── life/
+    ├── README.md                          # Life overview (EN)
+    └── README.zh.md                       # 生活概述（中文）
 
 ## Roadmap
 
