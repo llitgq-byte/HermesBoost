@@ -36,6 +36,7 @@ Every piece is originally crafted. Nothing is copied from a template or generate
 |--------|-------------|
 | **[SysTools-memory-file-guard](SysTools-memory-file-guard/)** | Intercepts memory/user file writes, requires explicit user approval before allowing changes. Prevents silent memory corruption. [中文 →](SysTools-memory-file-guard/README.zh.md) |
 | **[SysTools-feishu-cards](SysTools-feishu-cards/)** | Auto-converts Markdown tables, headings, code blocks in Feishu replies to interactive JSON 2.0 cards. Dual-layer (Agent + Plugin). [中文 →](SysTools-feishu-cards/README.zh.md) |
+| **[SysTools-feishu-bitable](SysTools-feishu-bitable/)** | Universal Feishu Bitable (multidimensional table) API guide with pure-Python helper script. 16 documented pitfalls, zero dependencies. [中文 →](SysTools-feishu-bitable/README.zh.md) |
 
 > 💡 Copy the prompt from its page → paste to your Agent → auto-configured.
 
@@ -73,6 +74,13 @@ hermesboost/
 │       └── bundled/plugins/feishu-table-card/
 │           ├── __init__.py                  # Plugin hook
 │           └── plugin.yaml
+├── SysTools-feishu-bitable/                 # Feishu Bitable API guide + helper
+│   ├── README.md                          # Public docs (EN)
+│   ├── README.zh.md                       # 公开文档（中文）
+│   └── feishu-bitable/                    # Skill content
+│       ├── SKILL.md                        # Agent instruction
+│       └── scripts/
+│           └── feishu_bitable.py            # Python helper (urllib, no deps)
 ```
 
 ## Roadmap
@@ -80,7 +88,7 @@ hermesboost/
 | Phase | Status | Focus |
 |-------|--------|-------|
 | Guardrails & Protection | ✅ Shipped | Memory file guard |
-| Platform Integration | In Progress | Feishu card rendering |
+| Platform Integration | ✅ Shipped | Feishu card rendering, Bitable API |
 | Further Exploration | Open | Wherever the gaps appear |
 
 The journey itself is the product. Every component is originally crafted.
