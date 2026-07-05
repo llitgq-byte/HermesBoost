@@ -126,4 +126,8 @@ hermesboost/
 | Platform Integration | ✅ Shipped | Feishu card rendering, Bitable API |
 | Further Exploration | Open | Wherever the gaps appear |
 
+## License
+
+MIT — see [LICENSE](LICENSE) for details.
+
 The journey itself is the product. Every component is originally crafted.
